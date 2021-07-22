@@ -1,0 +1,40 @@
+.app {
+    text-align: center;
+}
+
+.app h2 {
+    text-transform: capitalize;
+    font-family: 'Satisfy', cursive;
+    font-size: 5rem;
+    letter-spacing: .2rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    color: #333;
+}
+
+.highscores-subheading {
+    color: #333;
+}
+
+.app span {
+    font-size: 2rem;
+    font-family: 'Satisfy', cursive;
+}
+
+.scores {
+    margin-top: 1rem;
+    list-style-type: disc !important;
+}
+
+.scores li {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.end-color {
+    color:  #975F15;
+}
+
+.btn {
+    width: 20rem;
+    margin-top: 2rem;
+}

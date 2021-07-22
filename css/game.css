@@ -1,0 +1,135 @@
+.game-btn-container {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.game-btn-container .btn {
+    margin: 1rem;
+}
+
+.game-options {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter-container {
+    width: 100%;
+    text-align: center;
+}
+
+.counter-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.counter-container h2,
+.time {
+    font-size: 1.4rem;
+    color: #333;
+    font-style: italic;
+    letter-spacing: .1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.number-counter,
+.time span{
+    color: #975F15;
+    font-size: 1.6rem;
+}
+
+.monster-counter-outer {
+    border: .1rem solid #975F15;
+    border-radius: .3rem;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.monster-counter-inner {
+    background: #975F15;
+    height: 1.9rem;
+    width: 0;
+    transition: width .4s ease-in-out;
+}
+
+#message {
+    color: #975F15;
+    font-weight: bold;
+    font-size: 2rem;
+    display: none;
+    animation: fadeIN 1s linear forwards;
+    font-family: 'Satisfy', cursive;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 150rem;
+    position: relative;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: 1;
+    transform: translateZ(0);
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.front img {
+    width: 60%;
+}
+
+.change > .front {
+    opacity: 0;
+    z-index: -1;
+    transform: translateZ(-5rem);
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    transform: translateZ(-5rem);
+    opacity: 0;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.back img {
+    width: 50%;
+}
+
+.change > .back {
+    opacity: .9;
+    z-index: 1;
+    transform: translateZ(0);
+}
+
+@keyframes fadeIN {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
